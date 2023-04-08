@@ -11,6 +11,12 @@ public class GameOfLifeGUI extends JFrame {
         this.rows = rows;
         this.columns = columns;
         this.gridButtons = new JButton[rows][columns];
+        try {
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }      
         initComponents();
     }
 
